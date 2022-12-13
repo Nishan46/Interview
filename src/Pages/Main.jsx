@@ -14,7 +14,6 @@ function Main() {
   const [Class, setClass] = useState('');
   const [Email, setEmail] = useState('');
   const [Phone, setPhone] = useState('');
-  const [Birthday, setBirthday] = useState('');
   const [iseLoad , setIsLoad] = useState(false);
   const [showId , setshowId] = useState(false);
   const [latsId , setlatsId] = useState(0);
@@ -31,7 +30,6 @@ function Main() {
           Class:Class,
           'Email Address':Email,
           'Phone Number':Phone,
-          'Date of Birth':Birthday
         }
         setlatsId(Id)
         axios.post(BASE_URL,data).then((response) => {
@@ -83,7 +81,6 @@ function Main() {
         })
 
         setName("")
-        setBirthday('YYYY-MM-DD')
         setPhone('')
         setEmail('')
         setClass('')
@@ -122,11 +119,6 @@ function Main() {
           <span className='w-[95%] flex flex-col justify-center'>
             <label className='text-md font-bold' htmlFor='sname'>Name:</label>
             <input value={Name} onChange={(e) => setName(e.target.value)} required id='sname' className='font-bold focus:shadow-lg focus:border-blue-300 ml-5 rounded-sm shadow-sm outline-none p-2'/>
-          </span>
-
-          <span className='w-[95%] flex flex-col justify-center'>
-            <label className='text-md font-bold' htmlFor='birthday'>Birthday:</label>
-            <input value={Birthday} type={'date'} onChange={(e) => setBirthday(e.target.value)} required id='birthday' className='font-bold focus:shadow-lg focus:border-blue-300 ml-5 rounded-sm shadow-sm outline-none p-2'/>
           </span>
 
           <span className='w-[95%] flex flex-col justify-center'>
