@@ -68,7 +68,6 @@ function Main() {
           Class:Class,
           'Email Address':Email,
           'Phone Number':Phone,
-          'Date of Birth':Birthday
         }
         setlatsId(Id)
 
