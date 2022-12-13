@@ -13,32 +13,6 @@ import PandV from './Pages/PandV';
 import Technical from './Pages/Technical';
 import AandR from './Pages/AandR';
 
-
-const router = createBrowserRouter([
-  {
-      path: "/",
-      element: (
-        <App/>
-      ),
-    },
-    {
-      path: "main",
-      element: <Main/>,
-    },
-    {
-      path: "photography&videography",
-      element: <PandV/>,
-    },
-    {
-      path: "technical",
-      element: <Technical/>,
-    },
-    {
-      path: "announcing&reporting",
-      element: <AandR/>,
-    },
-  ]);
-
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router}/>
+  <App/>
 )
